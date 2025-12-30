@@ -1,0 +1,11 @@
+.navbar{background:#fff; box-shadow:0 2px 5px rgba(0,0,0,0.1); position:sticky; top:0; z-index:50;}
+.navbar-container{display:flex; justify-content:space-between; align-items:center; padding:16px;}
+.navbar-logo{font-size:24px; font-weight:bold; color:#ec4899; text-decoration:none;}
+.navbar-links{display:flex; gap:16px;}
+.navbar-links a, .navbar-links button, .navbar-links span{color:#333; text-decoration:none; padding:4px 8px; border-radius:4px;}
+.menu-toggle{display:none; background:none; border:none; font-size:24px; cursor:pointer;}
+@media(max-width:768px){.navbar-links{display:none; flex-direction:column; gap:8px; margin-top:8px;}.navbar-links.active{display:flex;}.menu-toggle{display:block;}}
+.active{
+    color: #ff3f93 !important; 
+    font-weight: bold;
+}

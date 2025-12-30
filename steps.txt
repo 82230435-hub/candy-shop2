@@ -1,0 +1,58 @@
+1 -- initialize the node js project with default setting  for server
+npm init -y  
+
+2 --add the  below 2 lines to package.json
+    "start": "node server.js" ,
+    "dev": "nodemon server.js"
+    -- Runs your app using plain Node.js
+          "start": "node index.js"
+
+      --Start the development server with auto-reload
+        "dev": "nodemon server.js"
+
+3 -- change  to 
+   "main": "server.js",
+
+4 -- create the server.js
+
+5 -- npm install express mysql cors nodemon  multer
+    --express: Web framework for Node.js
+                 Simplifies creating web servers and APIs
+                 Handles routing (GET, POST, PUT, DELETE requests)
+                 Manages middleware (functions that process requests)
+                 Makes HTTP server setup much easier than raw Node.js
+
+    --mysql: MySQL database driver for Node.js
+             Connects your Node.js app to MySQL database
+             Executes SQL queries
+             Manages database connections   
+
+    -- corse: Cross-Origin Resource Sharing middleware
+              Allows your frontend (running on one port) to communicate 
+              with your backend (running on another port).
+              Prevents browser security errors
+              Controls which domains can access your API      
+
+    -- nodemon: Development tool that auto-restarts your server
+                Watches your files for changes
+                Automatically restarts Node.js when you save
+                Saves you from manually stopping/starting server     
+
+   -- multer : used for uploading files
+               Handles file uploads from forms
+               Saves files to disk or memory
+               Validates file types and sizes
+               Works with Express.js
+
+// on error frontend --> npm install --save-dev cross-env
+
+express → creates a web server and API routes.
+
+mysql → allows Node.js to connect and interact with MySQL databases.
+
+cors → enables Cross-Origin Resource Sharing, allowing frontend apps (like Angular or React) to call this backend from another domain or port.
+
+multer → used for file uploads (though not used yet in your code).
+
+path → helps manage file paths (used with multer or file handling).
+
