@@ -11,7 +11,7 @@ function Login() {
 
   const handleLogin = (e) => {
     e.preventDefault();
-    axios.post("http://localhost:5000/api/login", { email, password })
+    axios.post("https://candy-shop-server.onrender.com/api/login", { email, password })
       .then(res => {
         login(res.data.user); // حفظ المستخدم في AuthContext
         navigate("/features");
