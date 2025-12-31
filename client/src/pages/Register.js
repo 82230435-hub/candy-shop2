@@ -12,7 +12,7 @@ function Register() {
 
   const handleRegister = (e) => {
     e.preventDefault();
-    axios.post("http://localhost:5000/api/register", { username, email, password })
+    axios.post("https://candy-shop-server.onrender.com/api/register", { username, email, password })
       .then(res => {
         login(res.data.user); // تسجيل الدخول بعد التسجيل
         navigate("/features"); // الانتقال لصفحة المنتجات
