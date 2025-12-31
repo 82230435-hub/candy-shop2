@@ -7,7 +7,7 @@ const path = require("path");
 
 const app = express();
 
-app.use(cors({ origin: "http://localhost:3000", credentials: true }));
+app.use(cors({ origin: "https://candy-shop-client1.onrender.com", credentials: true }));
 app.use(express.json());
 app.use(session({ secret: "secret", resave: false, saveUninitialized: true }));
 
