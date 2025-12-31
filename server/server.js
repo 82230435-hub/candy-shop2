@@ -21,6 +21,7 @@ const db = mysql.createConnection({
   password: "password123",                    // DB_PASS
   database: "candy_shop",                     // DB_NAME
   multipleStatements: true
+  ssl: { rejectUnauthorized: false }
 });
 
 db.connect((err) => {
