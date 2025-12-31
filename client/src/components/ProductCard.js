@@ -4,7 +4,7 @@ function ProductCard({ product, onAdd, user }) {
   return (
     <div style={{ border: "1px solid #ccc", padding: "10px", width: "200px" }}>
       <img
-        src={`http://localhost:5000/images/${product.image}`}
+        src={`https://candy-shop-server.onrender.com/images/${product.image}`}
         alt={product.name}
         width="150"
       />
