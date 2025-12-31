@@ -10,7 +10,7 @@ function Contact() {
     e.preventDefault();
     setError("");
     try {
-      await axios.post("http://localhost:5000/api/contact", form);
+      await axios.post("https://candy-shop-server.onrender.com/api/contact", form);
       setSubmitted(true);
       setForm({ name: "", email: "", message: "" });
     } catch {
