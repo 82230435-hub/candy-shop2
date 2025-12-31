@@ -7,7 +7,7 @@ function Home() {
       <h1>Welcome to CandyShop!</h1>
       <p>Discover the sweetest treats online!</p>
       <img
-        src="http://localhost:5000/images/Candys.png"
+        src="https://candy-shop-server.onrender.com/images/Candys.png"
         alt="Candies"
         width="300"
       />
