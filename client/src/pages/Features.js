@@ -11,7 +11,7 @@ function Features() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    axios.get("http://localhost:5000/api/products")
+    axios.get("https://candy-shop-server.onrender.com/api/products")
       .then(res => setProducts(res.data))
       .finally(() => setLoading(false));
   }, []);
