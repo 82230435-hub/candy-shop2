@@ -12,7 +12,7 @@ export function CartProvider({ children }) {
       return;
     }
 
-    axios.post("http://localhost:5000/api/cart", {
+    axios.post("https://candy-shop-server.onrender.com/api/cart", {
       user_id: user.id,
       product_id: product.id,
       quantity: 1
@@ -31,14 +31,14 @@ export function CartProvider({ children }) {
 
   const removeFromCart = (product_id, user) => {
     if (!user) return;
-    axios.delete(`http://localhost:5000/api/cart/${product_id}`)
+    axios.delete(`https://candy-shop-server.onrender.com/api/cart/${product_id}`)
       .then(() => setCart(prev => prev.filter(p => p.product_id !== product_id)))
       .catch(err => console.log(err));
   };
 
   const clearCart = (user) => {
     if (!user) return;
-    axios.delete(`http://localhost:5000/api/cart/user/${user.id}`)
+    axios.delete(`https://candy-shop-server.onrender.com/api/cart/user/${user.id}`)
       .then(() => setCart([]))
       .catch(err => console.log(err));
   };
