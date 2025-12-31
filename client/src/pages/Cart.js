@@ -10,7 +10,7 @@ function Cart() {
   // جلب الكارت من DB عند فتح الصفحة
   useEffect(() => {
     if (!user) return;
-    axios.get(`http://localhost:5000/api/cart/${user.id}`)
+    axios.get(`https://candy-shop-server.onrender.com/api/cart/${user.id}`)
       .then(res => setCart(res.data))
       .catch(err => console.log(err));
   }, [user, setCart]);
