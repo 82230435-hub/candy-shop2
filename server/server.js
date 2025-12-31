@@ -15,14 +15,25 @@ app.use(session({ secret: "secret", resave: false, saveUninitialized: true }));
 app.use("/images", express.static(path.join(__dirname, "public/images")));
 
 // Database
-require('dotenv').config(); // أعلى الملف
-
 const db = mysql.createConnection({
-  host: process.env.DB_HOST,
-  user: process.env.DB_USER,
-  password: process.env.DB_PASS,
-  database: process.env.DB_NAME,
+  host: "containers-us-west-123.railway.app", // DB_HOST
+  user: "root",                               // DB_USER
+  password: "password123",                    // DB_PASS
+  database: "candy_shop",                     // DB_NAME
   multipleStatements: true
+});
+
+db.connect((err) => {
+  if (err) {
+    console.error("❌ Database connection failed:", err);
+    return;
+  }
+  console.log("✅ Database connected");
+
+  db.query(initDB, (err) => {
+    if (err) console.log("DB init error:", err);
+    else console.log("Database and tables ready");
+  });
 });
 
 
